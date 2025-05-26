@@ -1,0 +1,16 @@
+# Go
+/go-bot/bin/
+/go-bot/pkg/
+*.exe
+*.test
+*.out
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Docker
+*.log
