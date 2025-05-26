@@ -1,0 +1,3 @@
+- put target-chat-id into .env
+- ask users for their chatIDs that they want to send their messages
+- ask to enter the chat links that they want to extract posts from
