@@ -18,8 +18,8 @@ RUN go build -o bot
 FROM debian:bookworm-slim
 
 # Install certificates for HTTPS
-# RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
-RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
 
 
 # Create app directory
@@ -27,7 +27,7 @@ WORKDIR /app
 
 # Copy built binary and env
 COPY --from=builder /app/bot .
-COPY .env .
+# COPY .env .
 
 # Run the bot
 CMD ["./bot"]

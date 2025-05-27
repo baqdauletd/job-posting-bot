@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 	"telegram-bot-go/clients"
-	"telegram-bot-go/config"
+	// "telegram-bot-go/config"
 	"telegram-bot-go/handlers"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
@@ -13,7 +13,8 @@ import (
 
 
 func main(){
-	_ = config.Config("TELEGRAM_APITOKEN")
+	// _ = config.Config("TELEGRAM_APITOKEN")
+	_ = os.Getenv("TELEGRAM_APITOKEN")
 
 	bot := clients.Init()
 	app := fiber.New()
